@@ -82,16 +82,16 @@ class Todoteca extends Component {
             // const jsonDataType = await responseType.json();
             var data = document.getElementById("search");
             if (data.value == "") {
-                // const responseMedia = await fetch(
-                //     "https://music-back-production.up.railway.app/api/v1/media"
-                // );
-                // const jsonDataMedia = await responseMedia.json();
+                const responseMedia = await fetch(
+                    "https://music-back-production.up.railway.app/api/v1/media"
+                );
+                const jsonDataMedia = await responseMedia.json();
 
                 const { selected } = this.state;
                 this.setState({
                     level: this.state.level,
                     type: this.state.type,
-                    media: this.state.media,
+                    media: jsonDataMedia,
                     selected: selected,
                 });
                 console.log("XDD Arriba");
