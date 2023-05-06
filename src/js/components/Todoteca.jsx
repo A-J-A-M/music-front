@@ -108,7 +108,7 @@ class Todoteca extends Component {
                 };
                 console.log(requestOptions);
                 const responseMedia = await fetch(
-                    "https://music-back-production.up.railway.app/v1/media/search/" + data.value,
+                    "https://music-back-production.up.railway.app/api/v1/media/search/" + data.value,
                     requestOptions
                 );
                 const jsonDataMedia = await responseMedia.json();
